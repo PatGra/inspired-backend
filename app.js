@@ -10,7 +10,7 @@ const logger = require('morgan');
 
 const uri = process.env.URI_DB 
 
-const projectsRouter = require('./routes/projects.routes');
+
 const usersRouter = require('./routes/users.routes');
 
 const app = express();
@@ -37,7 +37,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use( projectsRouter);
+
 app.use( usersRouter);
 
 
